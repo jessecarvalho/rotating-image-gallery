@@ -1,15 +1,35 @@
-
 const images = document.querySelectorAll('.image');
-let index = 0;
 const img_modal = document.querySelector('.modal .content img');
 const modal = document.querySelector('.modal');
 const btn_close_modal = document.querySelector('#close-modal');
+const timer = 3000;
+
+function initFunctions() {
+    btn_close_modal.addEventListener("click", closeModal);
+    modal.addEventListener("click", closeModal);
+    window.addEventListener("resize", resizeScreen);
+    initGallery();
+    setInterval(rotateGallery, timer)
+    for(let i = 0; i < images.length; i++) {
+        images[i].addEventListener("click", showModal);
+    }
+}
+
+function initGallery() {
+    for (let i = 0; i < images.length - 1; i++) {
+        let image = images[i];
+        let imageWidth = window.getComputedStyle(image).width;
+        left = parseInt(imageWidth) * i;
+        left = left + 'px';
+        image.style.left = left;
+    }
+}
+
+function resizeScreen() {
+    initGallery();
+}
 
 function rotateGallery() {
-  index++;
-  if (index > images.length - 1) {
-    index = 0;
-  }
   for (let i = 0; i < images.length - 1; i++) {
     let image = images[i];
     let left = window.getComputedStyle(image).left;
@@ -32,14 +52,4 @@ function closeModal() {
   modal.style.display = "none";
 }
 
-for(let i = 0; i < images.length; i++) {
-  images[i].addEventListener("click",
-       showModal);
-}
-
-btn_close_modal.addEventListener("click",
-       closeModal);
-modal.addEventListener("click",
-       closeModal);
-
-setInterval(rotateGallery, 3000)
+initFunctions();
