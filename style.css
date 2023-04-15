@@ -1,0 +1,100 @@
+body {
+    overflow-x: hidden;
+  }
+  
+  .container{
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .container .slider {
+    display: flex;
+  }
+  
+  .slider .image {
+    width: 16.666%;
+    height: 200px;
+    cursor: pointer;
+    position:absolute;
+  }
+  
+  .slider .image:nth-child(1) {
+    background-image: url('https://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png');
+    background-size: cover;
+    left: 0;
+  }
+  
+  .slider .image:nth-child(2) {
+    background-image: url('https://mundoconectado.com.br/uploads/2022/05/25/25658/cacto.jpg');
+    background-size: cover;
+    left: 16.666%;
+  }
+  
+  .slider .image:nth-child(3) {
+    background-image: url('https://www.ufmt.br/ocs/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image04_grd.png');
+    background-size: cover;
+    left: 33.332%;
+  }
+  
+  .slider .image:nth-child(4) {
+    background-image: url('https://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png');
+    background-size: cover;
+    left: 49.998%;
+  }
+  
+  .slider .image:nth-child(5) {
+    background-image: url('https://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png');
+    background-size: cover;
+    left: 66.664%;
+  }
+  
+  .slider .image:nth-child(6) {
+    background-image: url('https://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png');
+    background-size: cover;
+    left: 83.33%;
+  }
+  
+  .slider .image:nth-child(7) {
+    background-image: url('https://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png');
+    background-size: cover;
+    left: -16.666%;
+  }
+  
+  .slider .image:nth-child(8) {
+    background-image: url('https://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png');
+    background-size: cover;
+    left: -33.332%;
+  }
+  
+  .modal {
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .modal #close-modal {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    background-color: white;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+  
+  .modal .content {
+    width: 50%;
+    height: 50vh;
+    margin: auto;
+  }
+  
+  .modal .content img {
+    width: 100%;
+    height: 100%;
+  }
